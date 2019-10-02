@@ -51,6 +51,7 @@ class ListItem extends Component {
         ) : (
           <section>
             {this.props.element}
+            <button onClick={() => this.props.delete(this.props.index)}>Delete</button>
             <button onClick={() => this.edit()}>EDIT</button>
           </section>
         )}

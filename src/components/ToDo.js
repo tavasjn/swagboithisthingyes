@@ -41,6 +41,14 @@ class ToDo extends Component {
     });
   };
 
+  delete = index => {
+    axios.delete(`/api/list/${index}`).then(response => {
+      this.setState({
+        list: response.data
+      });
+    });
+  };
+
   render() {
     console.log(this.state);
     return (
